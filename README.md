@@ -17,4 +17,4 @@ I used Vite to build this app. Vite is made by Vercel. It's a better alternative
 
 The app is built with Typescript. 
 
-I implemented an ESLint config I shared with one of my coding buddies that we use in our personal apps. Was easier to set up than setting up ESLint from scratch. Need that formatting. :very_dapper_man_who_clearly_is_organized:
+I implemented an ESLint config I share with one of my coding colleagues that we use in our personal apps. Was easier to set up than setting up ESLint from scratch. 
