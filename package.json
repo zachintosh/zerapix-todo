@@ -12,6 +12,7 @@
     "@digital-taco/eslint-config": "^1.1.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.17",
     "eslint": "^8.29.0",
     "eslint-config-airbnb": "^19.0.4",

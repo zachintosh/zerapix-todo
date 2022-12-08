@@ -1,31 +1,26 @@
 import React from 'react'
 import List from '@mui/material/List'
-import { Todo, CheckedItems } from '../types'
+import { Todo } from '../types'
 import ToDoItem from './ToDoItem'
 import Typography from '@mui/material/Typography'
 
 type ToDoListProps = {
   todos: Todo[]
-  checkedItems: CheckedItems
-  checkItem: (todo: Todo, checked: boolean) => void
+  updateItem: (updatedItem: Todo) => void
+  deleteItem: (id: number) => void
 }
 
 export default function ToDoList({
   todos = [],
-  checkedItems,
-  checkItem,
+  updateItem,
+  deleteItem,
 }: ToDoListProps): JSX.Element {
   return (
     <>
       {todos.length > 0 ? (
         <List>
           {todos.map((todo) => (
-            <ToDoItem
-              key={todo.id}
-              todo={todo}
-              checked={!!checkedItems[todo.id]}
-              checkItem={checkItem}
-            />
+            <ToDoItem key={todo.id} todo={todo} updateItem={updateItem} deleteItem={deleteItem} />
           ))}
         </List>
       ) : (

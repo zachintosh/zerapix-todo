@@ -7,8 +7,8 @@ type AddNewItemFieldProps = {
 
 export default function AddNewItemField({ addItem }: AddNewItemFieldProps): JSX.Element {
   const fieldRef = useRef<HTMLInputElement>()
-  
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+
+  function onSubmit(e: React.FormEvent<HTMLFormElement>): void {
     e.preventDefault() // prevent form from reloading the page
     const newItemTitle = fieldRef.current?.value
     if (fieldRef.current && newItemTitle) {
@@ -16,10 +16,16 @@ export default function AddNewItemField({ addItem }: AddNewItemFieldProps): JSX.
       fieldRef.current.value = ''
     }
   }
-  
+
   return (
     <form onSubmit={onSubmit}>
-      <TextField id="outlined-basic" label="Add Item" variant="standard" inputRef={fieldRef} />
+      <TextField
+        fullWidth
+        id="outlined-basic"
+        label="Add Item"
+        variant="standard"
+        inputRef={fieldRef}
+      />
     </form>
   )
 }

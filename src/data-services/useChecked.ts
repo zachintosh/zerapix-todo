@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Todo, CheckedItems } from '../types'
 
 type UseCheckedReturn = {
@@ -10,8 +10,8 @@ export default function useChecked(): UseCheckedReturn {
   const [checked, setChecked] = useState<CheckedItems>({})
 
   function checkItem(todo: Todo, checked: boolean): void {
-    setChecked(prev => ({...prev, [todo.id]: checked}))
+    setChecked((prev) => ({ ...prev, [todo.id]: checked }))
   }
-  
-  return {checked, checkItem}
+
+  return { checked, checkItem }
 }
